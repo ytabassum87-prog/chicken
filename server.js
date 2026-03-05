@@ -1,11 +1,10 @@
 const express = require("express");
 const path = require("path");
 const crypto = require("crypto");
+
 const dbModule = require("./database");
-
-const db = dbModule;
-const { hashPassword } = dbModule;
-
+const db = dbModule.db;
+const hashPassword = dbModule.hashPassword;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
